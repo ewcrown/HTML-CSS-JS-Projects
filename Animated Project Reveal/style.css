@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Krona One', sans-serif;
+}
+body::-webkit-scrollbar,
+.apr-container::-webkit-scrollbar {
+    display: none;
+}
+
+.apr-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.apr-slide-img {
+    text-align: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+.apr-background-text {
+    z-index: -1;
+    text-align: center;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    font-size: 60px;
+}
+
+.apr-slide {
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    transition: all .3s ease-in-out;
+}
+
+.apr-slide-content {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 0px 0px 70px;
+}
+
+.apr-slide-number {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0,0,0,.4);
+    position: absolute;
+    bottom: 90px;
+    font-size: 150px;
+    letter-spacing: .04em;
+    line-height: 105px;
+    font-weight: 400;
+}
+
+.apr-scrolls img {
+    width: 36px;
+    height: 24px;
+}
+
+.apr-scroll-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.apr-scrolls {
+    position: fixed;
+    top: 50vh;
+    left: 0;
+    display: flex;
+    transform: rotate(270deg);
+}
+
+.apr-scroll-down {
+    display: none;
+}
+
+
+.apr-slide-content.active {
+    display: flex;
+}
+
+.apr-slide.slide01 .apr-slide-img {
+    left: 200px;
+    top:0;
+}
+.apr-slide.slide02 .apr-slide-img {
+    left: -100px;
+    top:0;
+}
+.apr-slide.slide03 .apr-slide-img {
+    left: -300px;
+    top:0;
+}
+.apr-slide.slide04 .apr-slide-img {
+    left: 100px;
+    top: 200px;
+}
+.apr-slide.slide05 .apr-slide-img {
+    left: 200px;
+    top:0;
+}
